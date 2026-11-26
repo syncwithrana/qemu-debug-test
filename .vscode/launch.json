@@ -1,0 +1,20 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "qemu-m3",
+            "request": "launch",
+            "name": "Debug Firmware",
+            "elfFile": "${workspaceFolder}/${make:TARGET}",
+            "qemuPath": "${make:QEMU}",
+            "gdbPath": "${make:GDB}",
+            "gdbPort": 3333,
+            "machine": "${make:QEMU_MACH}",
+            "buildCommand": "make -C ${workspaceFolder}",
+            "ledRegister": "${make:LED_ADDR}"
+        }
+    ]
+}
