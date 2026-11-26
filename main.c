@@ -1,3 +1,6 @@
+#include "methods.h"
 int main(void) {
-  while (1);
+  calculate(4, 5);
+  while (1)
+    ;
 }
